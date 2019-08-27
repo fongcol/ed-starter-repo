@@ -5,11 +5,11 @@ infrastructure:
    ecr_repo:
        stack_name: elasticdev:::ecr_repo
        arguments:
-          name: <ecr repo name to push images to>
+          name: <ecr repo name to create>
    dockerhost:
        stack_name: elasticdev:::ec2_docker_host
        arguments:
-          size: <ec2 instance flavor/size>
+          size: <ec2 instance flavor/size to do build>
           disksize: <disksize of the dockerhost to build code>
        stack_vars:
            - name: elasticdev:::ubuntu::ec2_ubuntu
@@ -24,8 +24,8 @@ build:
        arguments:
            repo_url: <github repo to do build>
            repo_branch: <github branch on repo to do build>
-           dockerfile: <name of the Dockerfile: the default is "Dockerfile"
-           dockerfile_test: <name of the Dockerfile to do test: the default is "Dockerfile_test"
+           dockerfile: <name of the Dockerfile: the default is "Dockerfile">
+           dockerfile_test: <name of the Dockerfile to do test: the default is "Dockerfile_test">
            triggered_branches:
              - master
 destroy:
