@@ -1,6 +1,5 @@
 global_arguments:
    aws_default_region: us-west-2
-   region: us-west-2
    vpc_name: secure_vpc
 infrastructure:
    vpc:
