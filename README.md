@@ -15,3 +15,9 @@
 | argument      | description                            | var type | default      |
 | ------------- | -------------------------------------- | -------- | ------------ |
 | vpc_name   | name of the vpc                 | string   | None         |
+
+**Optional**
+
+| argument      | description                            | var type | default      |
+| ------------- | -------------------------------------- | -------- | ------------ |
+| region   | AWS region to create the vpc                 | string   | us-east-1         |
