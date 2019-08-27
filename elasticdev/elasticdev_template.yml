@@ -1,34 +1,16 @@
 global_arguments:
-   aws_default_region: <ec2 region>
-   docker_repo: <ecr repo name to push images to>
+   aws_default_region: <aws region>
 infrastructure:
-   ecr_repo:
-       stack_name: elasticdev:::ecr_repo
-       arguments:
-          name: <ecr repo name to push images to>
-   dockerhost:
-       stack_name: elasticdev:::ec2_docker_host
-       arguments:
-          size: <ec2 instance flavor/size>
-          disksize: <disksize of the dockerhost to build code>
-       stack_vars:
-           - name: elasticdev:::ubuntu::ec2_ubuntu
-             arguments:
-                  ip_key: public_ip
-build:
-   ci_example:
-       dependencies: 
-           - infrastructure::dockerhost
-           - infrastructure::ecr_repo
-       stack_name: elasticdev:::ec2_ci
-       arguments:
-           repo_url: <github repo to do build>
-           repo_branch: <github branch on repo to do build>
-           dockerfile: <name of the Dockerfile: the default is "Dockerfile"
-           dockerfile_test: <name of the Dockerfile to do test: the default is "Dockerfile_test"
-           triggered_branches:
-             - master
+       vpc:
+           stack_name: elasticdev:::aws_vpc_2tier
+           arguments:
+               vpc_name: <vpc_name>
+# below is optional.  it tells ED not to delete
+# the vpc when destroying the project
 destroy:
    stack_name: elasticdev:::ed_core::callback_delete
    arguments:
        pre_delete_resources: True
+       keep_resources:
+           - provider: ec2
+             resource_type: vpc
