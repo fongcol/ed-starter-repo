@@ -1,14 +1,16 @@
 global_arguments:
    aws_default_region: us-west-2
-   vpc_name: secure_vpc
 infrastructure:
    vpc:
        stack_name: elasticdev:::aws_vpc_2tier
+       arguments:
+          vpc_name: secure_env
    rds_mysql:
        stack_name: elasticdev:::create_rds
        dependencies: 
            - infrastructure::vpc
        arguments:
+          vpc_name: secure_env
           flavor: "db.t2.micro"
           size: 5
           engine: "MySQL"
