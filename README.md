@@ -16,8 +16,10 @@ elasticdev_example.yml - a sample that works
 
 **Output Fields**
 ```
+engine - MySQL or Postgres
+
 {engine}_HOST{engine} endpoint.
 {engine}_PORT{engine} port.
-{engine}_ROOT_USERNAME{engine} root username (randomlyndomly generated)
-{engine}_ROOT_PASSWORD{engine} root password (randomlyly generated)
+{engine}_ROOT_USERNAME{engine} (randomly generated)
+{engine}_ROOT_PASSWORD{engine} (randomly generated)
 ```
