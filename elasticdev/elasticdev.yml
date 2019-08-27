@@ -4,13 +4,13 @@ infrastructure:
    vpc:
        stack_name: elasticdev:::aws_vpc_2tier
        arguments:
-          vpc_name: secure_env
+          vpc_name: vpc_rds_eg
    rds_mysql:
        stack_name: elasticdev:::create_rds
        dependencies: 
            - infrastructure::vpc
        arguments:
-          vpc_name: secure_env
+          vpc_name: vpc_rds_eg
           flavor: "db.t2.micro"
           size: 5
           engine: "MySQL"
