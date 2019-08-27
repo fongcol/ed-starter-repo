@@ -1,16 +1,5 @@
 global_arguments:
    aws_default_region: <aws region>
 infrastructure:
-       vpc:
-           stack_name: elasticdev:::aws_vpc_2tier
-           arguments:
-               vpc_name: <vpc_name>
-# below is optional.  it tells ED not to delete
-# the vpc when destroying the project
-destroy:
-   stack_name: elasticdev:::ed_core::callback_delete
-   arguments:
-       pre_delete_resources: True
-       keep_resources:
-           - provider: ec2
-             resource_type: vpc
+   vpc:
+       stack_name: elasticdev:::aws_vpc_2tier
