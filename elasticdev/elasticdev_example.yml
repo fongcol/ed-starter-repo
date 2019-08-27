@@ -4,6 +4,8 @@ infrastructure:
    vpc:
        stack_name: aws_vpc_2tier
    rds_mysql:
+       dependencies: 
+           - infrastructure::vpc
        stack_name: aws_db_rds
        arguments:
           flavor: "db.t2.micro"
