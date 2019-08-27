@@ -1,10 +1,8 @@
 **Description**
 
-  - This sample elasticdev file performs CI with docker exclusively on AWS/Ec2.  It will automatically create the ecr_repo for your docker images. If the ecr_repo exists, you can remove that section in the yml.  However, you can leave it and it will not do anything if the repo already exists.
+  - This sample elastic.yml creates a VPC and places an RDS in that VPC.  It highlights the power of composable of stacks in a yml, though stacks ingesting stacks fully exploits the power of the platform.  The yml provides a level of composability, but the full power is available in native python language.
 
-  - Please be sure to provide for the location of the "Dockerfile" and "Dockerfile_test" relative to the code repository.  If Dockerfile_test is not provided, it will skip any elementary testing.  
-
-  - Please note, this is for basic CI.  For more complex CIs, feel free to use the BuildKite CI stack that will be coming out soon.  
+  - The database credentials are randomly created.  The endpoint and credentials are shown in the output section of the project.
 
 **files**
 
@@ -13,5 +11,5 @@ elasticdev_temple.yml - copy the file and filled the fields in "<>".
 ```
 
 ```
-elasticdev_examle.yml - a working copy that is working
+elasticdev_example.yml - a sample that works
 ```
