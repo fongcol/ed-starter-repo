@@ -13,3 +13,11 @@ elasticdev_temple.yml - copy the file and filled the fields in "<>".
 ```
 elasticdev_example.yml - a sample that works
 ```
+
+**Output Fields**
+```
+{engine}_HOST{engine} endpoint.
+{engine}_PORT{engine} port.
+{engine}_ROOT_USERNAME{engine} root username (randomlyndomly generated)
+{engine}_ROOT_PASSWORD{engine} root password (randomlyly generated)
+```
