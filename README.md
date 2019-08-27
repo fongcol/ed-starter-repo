@@ -13,5 +13,5 @@ elasticdev_temple.yml - copy the file and filled the fields in "<>".
 ```
 
 ```
-elasticdev_examle.yml - a working copy that is working
+elasticdev_example.yml - a example that is works
 ```
