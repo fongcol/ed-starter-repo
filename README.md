@@ -13,6 +13,7 @@
 | label   | a label is needed to automatically version ami images.  | string   | us-east-1         |
 
 **Optional**
+
 | argument      | description                            | var type | default      |
 | ------------- | -------------------------------------- | -------- | ------------ |
 | copy_regions   | regions to copy the image                 | string   | None         |
