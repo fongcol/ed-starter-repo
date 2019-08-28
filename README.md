@@ -15,4 +15,4 @@
 
 | argument      | description                            | var type | default      |
 | ------------- | -------------------------------------- | -------- | ------------ |
-| region   | AWS region to create the vpc                 | string   | us-east-1         |
+| aws_default_region   | AWS region to create the vpc                 | string   | us-east-1         |
