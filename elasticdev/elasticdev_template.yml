@@ -2,10 +2,10 @@ infrastructure:
    ami:
        stack_name: elasticdev:::create_ami
        arguments:
-          aws_default_region: us-west-2
-          instance_id: i-08a07cf9a972748c4
-          label: php-app
-          encrypted: True
+          aws_default_region: <aws_region where instance is>
+          instance_id: <server instance_id for creating the ami>
+          label: <label for the image used for versioning of image in the platform>
+          encrypted: <True/False specifies whether to encrypt the image>
           copy_regions: 
-              - us-east-1
+              - <regions to make copies of the ami image>
 
