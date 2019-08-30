@@ -3,5 +3,3 @@ global_arguments:
 infrastructure:
    vpc:
        stack_name: elasticdev:::aws_vpc_2tier
-       arguments: 
-           vpc_name: secure
