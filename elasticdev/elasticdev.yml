@@ -1,5 +1,5 @@
 global_arguments:
-   aws_default_region: us-west-2
+   aws_default_region: ap-southeast-1
 infrastructure:
    vpc:
        stack_name: elasticdev:::aws_vpc_2tier
